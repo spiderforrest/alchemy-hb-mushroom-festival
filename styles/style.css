@@ -1,0 +1,218 @@
+body {
+    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
+    /* --color1: hsla(349, 69%, 76%, 1);
+    --color2: hsla(207, 67%, 44%, 1);
+    --color3: hsla(200, 61%, 56%, 1);
+    --color4: hsla(187, 41%, 94%, 1);
+    --color5: hsla(170, 28%, 95%, 1); */
+
+    /* --color1: hsla(45, 86%, 83%, 1);
+    --color2: hsla(135, 65%, 98%, 1);
+    --color3: hsla(315, 37%, 86%, 1);
+    --color4: hsla(45, 73%, 98%, 1);
+    --color5: hsla(224, 40%, 79%, 1); */
+
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--color2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.gutter-right {
+    margin-right: 20px;
+}
+
+main {
+    height: 100%;
+    background-image: url('../assets/background-2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+main .table {
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/table.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+main .forest {
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/forest.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.main-logo {
+    animation: pulse 5s infinite ease-in-out;
+}
+
+.forest {
+    display: flex;
+    justify-content: center;
+}
+
+.header-button {
+    text-align: center;
+    border: solid 1px black;
+    background-color: white;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+}
+
+.header-button:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(2deg);
+    background-color: antiquewhite;
+}
+
+p {
+    margin: 0;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+.left,
+.middle,
+.right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right {
+    justify-content: space-between;
+}
+
+.friends {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.friend {
+    background-color: skyblue;
+    border: solid 1px black;
+    margin: 5px;
+    border-radius: 20px;
+    height: 100px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.friend .name {
+    font-size: 1.3rem;
+}
+
+.friend .emoji {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.friend:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(8deg);
+    background-color: lightblue;
+}
+
+.add-friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-friend input {
+    width: 100%;
+    text-align: center;
+    height: 3rem;
+    border: none;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.mushrooms {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 200px;
+}
+
+.mushroom {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/porcini.png');
+}
+
+label {
+    font-size: 2rem;
+}

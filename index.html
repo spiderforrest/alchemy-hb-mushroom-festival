@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/home.css" />
+        <title>Mushroom Festival</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="left">
+                <div class="forest">
+                    <button class="header-button" id="add-mushroom-button">
+                        Go mushroom hunting!
+                    </button>
+                </div>
+            </div>
+            <div class="middle">
+                <h1>
+                    Invite some friends to the mushroom festival and click on them give them yummy
+                    mushrooms.
+                </h1>
+                <div class="table">
+                    <div class="mushrooms"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="add-friend">
+                    <label for="friend-input">Invite a new friend</label>
+                    <input id="friend-input" placeholder="i.e. Sara" type="text" />
+                    <button class="header-button" id="add-friend-button" type="submit">
+                        Invite
+                    </button>
+                </div>
+                <div class="friends"></div>
+            </div>
+        </main>
+        <script type="module" src="./app.js"></script>
+    </body>
+</html>
