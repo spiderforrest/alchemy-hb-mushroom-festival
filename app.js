@@ -15,22 +15,25 @@ let mushroomCount = 3;
 
 const friendData = [
     {
-        name: 'Erich',
+        name: getRandName(),
         satisfaction: 2,
     },
     {
-        name: 'Sarah',
+        name: getRandName(),
         satisfaction: 3,
     },
     {
-        name: 'Missael',
+        name: getRandName(),
         satisfaction: 1,
     },
     {
-        name: 'Soraya',
+        name: getRandName(),
         satisfaction: 2,
     },
 ];
+
+// pick a random name for placeholder text
+friendInputEl.placeholder = `i.e. ${getRandName()}`;
 
 addMushroomButton.addEventListener('click', () => {
     if (Math.random() > 0.5) {
@@ -55,6 +58,8 @@ addFriendButton.addEventListener('click', () => {
     friendData.push(newFriend);
     // reset the input
     friendInputEl.value = '';
+    // pick another random name because why not
+    friendInputEl.placeholder = `i.e. ${getRandName()}`;
     // display all the friends (use a function here)
     displayFriends();
 });
