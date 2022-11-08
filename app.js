@@ -51,14 +51,14 @@ addFriendButton.addEventListener('click', () => {
     const newName = friendInputEl.value;
     // create a new friend object
     const newFriend = {
-        name: newName || getRandName(),
+        name: newName || friendInputEl.placeholder.slice(4),
         satisfaction: 1,
     };
     // push it into the friends state array, passed in as an argument
     friendData.push(newFriend);
     // reset the input
     friendInputEl.value = '';
-    // pick another random name because why not
+    // pick another random name
     friendInputEl.placeholder = `i.e. ${getRandName()}`;
     // display all the friends (use a function here)
     displayFriends();
