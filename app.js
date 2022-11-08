@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 import { renderMushroom, renderFriend } from './lib/render-utils.js';
-import { getRandName } from './lib/get-name.js';
+import { getRandName } from './lib/gen-rand-name.js';
 import { findFriendByName } from './lib/data-utils.js';
 
 const friendsEl = document.querySelector('.friends');
@@ -49,9 +49,15 @@ addMushroomButton.addEventListener('click', () => {
 addFriendButton.addEventListener('click', () => {
     // get the name from the input
     const newName = friendInputEl.value;
+    // check if name is taken
+    if (typeof findFriendByName(newName, friendData) !== 'boolean') {
+        friendInputEl.value = '';
+        alert('That name is taken!');
+        return;
+    }
     // create a new friend object
     const newFriend = {
-        name: newName || friendInputEl.placeholder.slice(4),
+        name: newName || friendInputEl.placeholder.slice(5),
         satisfaction: 1,
     };
     // push it into the friends state array, passed in as an argument
